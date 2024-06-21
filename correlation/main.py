@@ -6,7 +6,7 @@
 # calc the sum of xi2,yi2,xiyi,xi,yi
 # calc r by 
 # print(r)
-
+import keyboard
 def correlation(x,y) -> float:
   xi2,yi2,xyi,xi,yi= 0, 0, 0, 0, 0
   n=len(x)
@@ -22,13 +22,21 @@ def correlation(x,y) -> float:
     return 0
   corr=numerator/denominator
   return corr
+# x=list(range(3))
+# y=list(range(3))
 i=0
-x=list(range(3))
-y=list(range(3))
-while i<=2:
-  temp=input(f"x{i+1},y{i+1}= ").split(',')
-  x[i]=int(temp[0])
-  y[i]=int(temp[1])
+x,y=[],[]
+print('enter c when done writing')
+while True:
+  temp=input(f"x{i+1},y{i+1}= ")
+  if temp=='c':break
+  temp=temp.split(',')
+  try:
+    x.append(int(temp[0]))
+    y.append(int(temp[1]))
+  except ValueError:
+    print('bad input enter a valid number')
+    continue
   i+=1
 corr=correlation(x,y)
 print(f"x= {x}")
