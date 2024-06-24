@@ -6,7 +6,6 @@
 # calc the sum of xi2,yi2,xiyi,xi,yi
 # calc r by 
 # print(r)
-import keyboard
 def correlation(x,y) -> float:
   xi2,yi2,xyi,xi,yi= 0, 0, 0, 0, 0
   n=len(x)
