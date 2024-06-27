@@ -6,10 +6,8 @@ def insertion_sort(L: Sequence,des: bool=False) -> Sequence:
     key=L[i]
     j=i-1
     while j>=0:
-      if eval(f"L[j] {cmp} key"):L[j+1]=L[j]
+      if eval(f"L[j] {cmp} key"):L[j+1]=L[j] # eval did not effect the performance (tested)
       else:break # because we sure for now that every item on the left 
       j-=1       # is sorted
     L[j+1]=key
   return L
-l=[7,3,5,6,2]
-print(insertion_sort(l,des=True))    
