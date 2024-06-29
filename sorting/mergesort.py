@@ -1,6 +1,6 @@
 import random
 from typing import Sequence
-# merge
+
 def merge(arr: Sequence, start:int, mid:int, end:int):
   left_length=mid-start+1
   right_length=end-mid
@@ -38,7 +38,7 @@ def merge(arr: Sequence, start:int, mid:int, end:int):
 
 def merge_sort(arr:Sequence, start: int,end: int) -> None:
   if start>=end:return
-  mid = start + ((end-start) // 2)
+  mid = (start+end) // 2
   merge_sort(arr,start,mid)
   merge_sort(arr,mid+1,end)
   merge(arr,start,mid,end)
